@@ -17,15 +17,22 @@
   {"video_id":.., "targetRatioWH":[tw,th], "predictions":[{"frame":.., "bboxes":[x,y,w]}]}
 分数口径与 eval_local.py 完全一致（同帧匹配、IoU 加权 F1）。
 
+时间维选择（time_select/）
+  顶部「时间选择」下拉可直接载入 time_select 的产物（策略名即文件名），并在底部
+  音量包络上叠出「保留帧(红)/ GT 跨帧(绿)」条带、本帧标注「保留/已丢」——
+  针对整幅视频（框无意义、只有帧集在计分）就看这条带子。
+
 快捷键：空格 播放/暂停 · ←/→ 上一/下一帧 · ↑/↓ 上一/下一视频 · Home/End 首/末帧
 """
 import os
 import sys
 import json
+import glob
 import bisect
 import argparse
 import subprocess
 import tkinter as tk
+import tkinter.font as tkfont
 from tkinter import ttk, filedialog, messagebox
 
 import cv2
@@ -44,13 +51,33 @@ DATASETS = {
                      metadata="fu_metadata.json",
                      gt=None,
                      cache="fu_yolo_test_cache.json",
-                     result="fu_predictions_gated.jsonl"),
+                     result="predictions_trace_pet.jsonl",
+                     summary="vlm_summaries_test.json"),
     "本地val": dict(video_dir="val_video",
                     metadata="val_metadata.json",
                     gt="val_gt.jsonl",
                     cache="yolo_val_cache.json",
-                    result="predictions_val_gated.jsonl"),
+                    result="predictions_val_trace_pet.jsonl",
+                    summary="vlm_summaries_val.json"),
 }
+
+# 时间维选择实验产物（time_select/out/*）：下拉框里可直接载入查看
+TIMESEL_FILES = [
+    ("复赛test", os.path.join(HERE, "time_select", "out", "test"),
+     "predictions_timesel_*.jsonl"),
+    ("本地val", os.path.join(HERE, "time_select", "out", "val"),
+     "predictions_val_*.jsonl"),
+]
+
+
+def list_timesel_files():
+    """扫描 time_select 产物 -> {(数据集 | 文件名): (数据集, 绝对路径)}。"""
+    out = {}
+    for ds, d, pat in TIMESEL_FILES:
+        for p in sorted(glob.glob(os.path.join(d, pat))):
+            out["%s | %s" % (ds, os.path.basename(p))] = (ds, p)
+    return out
+
 
 RED = (60, 60, 235)      # 预测框（BGR），虚线
 GREEN = (70, 200, 70)    # GT 框（BGR），实线
@@ -120,6 +147,17 @@ def score_video(predm, gtm, tw, th):
 # --------------------------------------------------------------------------
 # 绘图
 # --------------------------------------------------------------------------
+def kept_runs(frames):
+    """帧号集合 -> 连续段 [(a,b), ...]（闭区间），用于在包络上画条带。"""
+    runs = []
+    for f in sorted(int(x) for x in frames):
+        if runs and f == runs[-1][1] + 1:
+            runs[-1][1] = f
+        else:
+            runs.append([f, f])
+    return runs
+
+
 def dashed_rect(img, x1, y1, x2, y2, color, thickness=2, dash=14):
     x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
 
@@ -250,17 +288,42 @@ def audio_envelope(path, n_frames, fps, sr=16000):
 
 
 # --------------------------------------------------------------------------
+# 中文字体
+# --------------------------------------------------------------------------
+# 本机 Tk 8.6 **没编 Xft**：tkfont.families() 只有 47 个核心 X11 位图族，没有
+# Noto/文泉驿等 CJK 族。任何 family="Noto Sans CJK SC" 之类都会静默回退到没有
+# 中文字形的 "fixed" → 中文全变方框（这就是「摘要显示一堆方格格」的根因）。
+# 核心字体里带中文字形的是 "song ti"(宋体) / "fangsong ti"(仿宋) / "mincho" / "gothic"。
+# 把 Tk 的默认命名字体统一切到这个族，整个 UI 的中文即可正常显示。
+CJK_FAMILY = "song ti"
+
+_NAMED_FONTS = ("TkDefaultFont", "TkTextFont", "TkMenuFont", "TkHeadingFont",
+                "TkCaptionFont", "TkTooltipFont", "TkFixedFont")
+
+
+def setup_cjk_fonts(root):
+    """把 Tk 默认命名字体的族换成带中文字形的核心 X11 族（幂等，失败不致命）。"""
+    for name in _NAMED_FONTS:
+        try:
+            tkfont.nametofont(name).configure(family=CJK_FAMILY)
+        except Exception:
+            pass
+
+
+# --------------------------------------------------------------------------
 # 应用
 # --------------------------------------------------------------------------
 class Viewer:
     def __init__(self, root):
         self.root = root
         root.title("AIC 结果对比 viewer")
+        setup_cjk_fonts(root)
 
         self.video_dir = None
         self.meta = {}
         self.gt = {}                 # {vid: (ratio, {frame:(x,y,w)})}
         self.pred = {}               # {vid: (ratio, {frame:(x,y,w)})}
+        self.summaries = {}          # {vid: "VLM 一句话摘要（≤15字）"}
         self.vids = []
         self.cur = 0                 # 当前视频在 self.vids 中的下标
         self.cap = None
@@ -277,6 +340,7 @@ class Viewer:
         self.audio = AudioPlayer()
         self.env = None          # 当前视频的逐帧音量包络
         self.env_cache = {}      # {vid: env}
+        self._ts_map = list_timesel_files()   # time_select 产物下拉
 
         self._build_ui()
 
@@ -284,6 +348,11 @@ class Viewer:
     def _build_ui(self):
         top = ttk.Frame(self.root, padding=6)
         top.pack(fill="x")
+
+        # 中文字体见文件顶部 setup_cjk_fonts()：本机 Tk 无 Xft，只能用带中文字形的
+        # 核心 X11 族 "song ti"（Noto 等族名会静默回退到无中文字形的 "fixed" → 方框）。
+        self.font_big = (CJK_FAMILY, 14, "bold")
+        self.font_bold = (CJK_FAMILY, 10, "bold")
 
         ttk.Label(top, text="结果文件").grid(row=0, column=0, sticky="e")
         self.e_result = ttk.Entry(top, width=46)
@@ -302,6 +371,15 @@ class Viewer:
         self.cb_ds.grid(row=1, column=6, padx=(4, 0))
         self.cb_ds.bind("<<ComboboxSelected>>", lambda e: self._apply_dataset())
 
+        # 时间维选择实验产物（time_select/out）：选中即载入对应结果文件
+        ttk.Label(top, text="时间选择").grid(row=2, column=0, sticky="e")
+        self.cb_ts = ttk.Combobox(top, values=list(self._ts_map), width=46,
+                                  state="readonly")
+        if self._ts_map:
+            self.cb_ts.set(next(iter(self._ts_map)))
+        self.cb_ts.grid(row=2, column=1, columnspan=4, sticky="we", padx=4, pady=(2, 0))
+        self.cb_ts.bind("<<ComboboxSelected>>", self._on_timesel)
+
         sel = ttk.Frame(self.root, padding=(6, 0))
         sel.pack(fill="x")
         ttk.Button(sel, text="◀ 上一视频", command=lambda: self.step_video(-1)).pack(side="left")
@@ -309,16 +387,25 @@ class Viewer:
         self.cb_vid.pack(side="left", padx=6)
         self.cb_vid.bind("<<ComboboxSelected>>", lambda e: self.select_video(self.cb_vid.current()))
         ttk.Button(sel, text="下一视频 ▶", command=lambda: self.step_video(1)).pack(side="left")
-        self.lbl_score = ttk.Label(sel, text="", font=("TkDefaultFont", 10, "bold"))
+        self.lbl_score = ttk.Label(sel, text="", font=self.font_bold)
         self.lbl_score.pack(side="left", padx=12)
         self.var_yolo = tk.BooleanVar(value=True)
         ttk.Checkbutton(sel, text="显示YOLO检测(橙=person)",
                         variable=self.var_yolo, command=self._redraw).pack(side="left", padx=6)
         self.audio_on = tk.BooleanVar(value=self.audio.enabled)
-        ttk.Checkbutton(sel, text="🔊 声音", variable=self.audio_on,
+        ttk.Checkbutton(sel, text="声音", variable=self.audio_on,
                         command=self._on_audio_toggle).pack(side="left", padx=6)
         self.lbl_file = ttk.Label(sel, text="", foreground="#666")
         self.lbl_file.pack(side="right", padx=8)
+
+        # VLM 内容摘要（每视频一句话，≤15 字；来源 vlm_summary.py 的缓存）
+        sumf = ttk.Frame(self.root, padding=(8, 2))
+        sumf.pack(fill="x")
+        ttk.Label(sumf, text="VLM 摘要").pack(side="left")
+        self.lbl_summary = ttk.Label(sumf, text="—",
+                                     font=self.font_big,
+                                     foreground="#0a6b3a")
+        self.lbl_summary.pack(side="left", padx=8)
 
         mid = ttk.Frame(self.root, padding=6)
         mid.pack()
@@ -331,8 +418,8 @@ class Viewer:
 
         wf = ttk.Frame(self.root, padding=(6, 0))
         wf.pack(fill="x")
-        ttk.Label(wf, text="音量包络(每帧RMS)").pack(side="left")
-        self.wave = tk.Canvas(wf, height=72, bg="#f7f7f7", highlightthickness=1,
+        ttk.Label(wf, text="音量包络(蓝) + 保留帧(红) / GT跨帧(绿)").pack(side="left")
+        self.wave = tk.Canvas(wf, height=96, bg="#f7f7f7", highlightthickness=1,
                               highlightbackground="#ccc")
         self.wave.pack(side="left", fill="x", expand=True, padx=(6, 0))
         self.wave.bind("<Configure>", lambda e: self._draw_wave())
@@ -343,14 +430,15 @@ class Viewer:
         bot.pack(fill="x")
         self.btn_play = ttk.Button(bot, text="▶ 播放", width=8, command=self.toggle_play)
         self.btn_play.pack(side="left")
-        ttk.Button(bot, text="⏮", width=3, command=lambda: self.seek(0)).pack(side="left")
+        # 用核心 X11 字体里存在的几何三角；⏮/⏭/⏸/🔊 等符号 song ti 无字形会变方框。
+        ttk.Button(bot, text="|◀", width=3, command=lambda: self.seek(0)).pack(side="left")
         ttk.Button(bot, text="◀", width=3, command=lambda: self.seek(self.cur_frame - 1)).pack(side="left")
         ttk.Button(bot, text="▶", width=3, command=lambda: self.seek(self.cur_frame + 1)).pack(side="left")
-        ttk.Button(bot, text="⏭", width=3,
+        ttk.Button(bot, text="▶|", width=3,
                    command=lambda: self.seek(self.n_frames - 1)).pack(side="left")
         self.scale = ttk.Scale(bot, from_=0, to=1, orient="horizontal", command=self._on_scale)
         self.scale.pack(side="left", fill="x", expand=True, padx=8)
-        self.lbl_frame = ttk.Label(bot, text="—", width=24)
+        self.lbl_frame = ttk.Label(bot, text="—", width=42)
         self.lbl_frame.pack(side="left")
 
         top.columnconfigure(1, weight=1)
@@ -384,8 +472,20 @@ class Viewer:
         self.video_dir = _p(ds["video_dir"])
         self.meta_path = ds["metadata"]
         self.cache_path = _p(ds["cache"])
+        self.summary_path = ds.get("summary")
         self.e_result.delete(0, "end"); self.e_result.insert(0, _p(ds["result"]))
         self.e_gt.delete(0, "end"); self.e_gt.insert(0, _p(ds["gt"]) if ds["gt"] else "")
+
+    def _on_timesel(self, _e=None):
+        """选中 time_select 产物 -> 切数据集、把结果文件填进去并载入。"""
+        ds, path = self._ts_map.get(self.cb_ts.get(), (None, None))
+        if not path or not os.path.exists(path):
+            return
+        if ds in DATASETS:
+            self.cb_ds.set(ds)
+            self._apply_dataset()          # 先按数据集填默认（GT/视频目录）
+        self.e_result.delete(0, "end"); self.e_result.insert(0, path)
+        self.reload()
 
     # ---------------- 载入 ----------------
     def reload(self):
@@ -399,6 +499,16 @@ class Viewer:
             messagebox.showerror("载入失败", "解析结果文件出错：%s" % e)
             return
         self.meta = load_meta(self.meta_path)
+
+        # VLM 每视频摘要（可选；文件缺失则为空）
+        self.summaries = {}
+        sp = getattr(self, "summary_path", None)
+        if sp and os.path.exists(_p(sp)):
+            try:
+                with open(_p(sp), "r", encoding="utf-8") as f:
+                    self.summaries = json.load(f)
+            except Exception:
+                self.summaries = {}
 
         gpath = self.e_gt.get().strip()
         self.gt = load_pred_map(_p(gpath)) if (gpath and os.path.exists(_p(gpath))) else {}
@@ -454,6 +564,7 @@ class Viewer:
         self.cb_vid.current(idx)
         vid = self.vids[idx]
         path = os.path.join(self.video_dir, vid + ".mp4")
+        self.lbl_summary.config(text=(self.summaries.get(vid) or "—"))
 
         if self.cap:
             self.cap.release()
@@ -554,8 +665,12 @@ class Viewer:
                                                    "" if ysrc == i else "(沿用)")
         else:
             ytag = "  YOLO:—"
-        self.lbl_frame.config(text="帧 %d/%d  此帧IoU=%s%s"
-                              % (i, self.n_frames - 1, cur_iou, ytag))
+        # 本帧的时间维状态：保留/已丢（+ GT 帧与否）
+        keep_tag = "保留" if pr is not None else "已丢"
+        if gm:
+            keep_tag += "·" + ("GT" if gt is not None else "非GT")
+        self.lbl_frame.config(text="帧 %d/%d  IoU=%s  [%s]%s"
+                              % (i, self.n_frames - 1, cur_iou, keep_tag, ytag))
 
         self._show(left, self.lbl_left)
         self._show(right, self.lbl_right)
@@ -569,13 +684,16 @@ class Viewer:
     def _draw_wave(self):
         c = self.wave
         c.delete("bars")
+        c.delete("band")
         W = c.winfo_width()
         H = int(c["height"])
         if self.env is None or W < 4 or not len(self.env):
             c.delete("ph")
             return
         n = len(self.env)
-        mid = H / 2.0
+        BAND = 22 if H >= 90 else 0          # 底部留给时间维条带
+        top_h = H - BAND
+        mid = top_h / 2.0
         for x in range(W):
             i0 = int(x / W * n)
             i1 = max(i0 + 1, int((x + 1) / W * n))
@@ -583,6 +701,25 @@ class Viewer:
             v = float(seg.max()) if seg.size else 0.0
             h = v * (mid - 3)
             c.create_line(x, mid - h, x, mid + h, fill="#4a90d9", tags="bars")
+
+        # 时间维：结果保留帧(红) / GT 跨帧(绿)。整幅视频的"框"无意义，看这里即可。
+        if BAND and self.vids:
+            vid = self.vids[self.cur]
+
+            def fx(f):
+                return int(f / max(1, n - 1) * (W - 1))
+
+            py0, py1 = top_h + 2, top_h + 10
+            gy0, gy1 = top_h + 12, H - 1
+            pm = (self.pred.get(vid) or (None, {}))[1]
+            gm = (self.gt.get(vid) or (None, {}))[1]
+            for a, b in kept_runs(pm):
+                c.create_rectangle(fx(a), py0, fx(b) + 1, py1,
+                                   fill="#e05555", outline="", tags="band")
+            if gm:
+                gk = list(gm.keys())
+                c.create_rectangle(fx(min(gk)), gy0, fx(max(gk)) + 1, gy1,
+                                   fill="#5cb85c", outline="", tags="band")
         self._wave_playhead()
 
     def _wave_playhead(self):
@@ -640,7 +777,7 @@ class Viewer:
 
     def toggle_play(self):
         self.playing = not self.playing
-        self.btn_play.config(text="⏸ 暂停" if self.playing else "▶ 播放")
+        self.btn_play.config(text="|| 暂停" if self.playing else "▶ 播放")
         if self.playing:
             self._audio_restart()
             self._tick()

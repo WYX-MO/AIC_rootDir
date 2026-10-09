@@ -1,0 +1,6 @@
+亮度缓存：57 视频（stride=5, dark-pixel=60）
+  ... 25/57 (1s)
+  ... 50/57 (3s)
+  ... 57/57 (4s)
+
+wrote val_black_cache.json (57 视频, 0.1 MB)
