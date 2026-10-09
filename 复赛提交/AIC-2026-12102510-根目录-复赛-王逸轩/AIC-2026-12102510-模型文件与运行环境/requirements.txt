@@ -1,0 +1,15 @@
+# 复赛运行环境依赖（实际使用版本，已在 Ubuntu 24.04 + Python 3.13.5 验证）
+#
+# 核心依赖（缺一不可）
+numpy==2.4.4
+opencv-python-headless==4.13.0.92
+ultralytics==8.4.53
+torch==2.8.0
+torchvision==0.23.0
+pillow==12.2.0
+
+# 可选（部分中间分析脚本用到；跑提交流水线本身不需要）
+scipy==1.15.3
+
+# 系统级（非 pip）：ffmpeg / ffprobe，用于读取视频帧数与时长；
+# 若不可用，stage_data.probe_one 会回退到 OpenCV 读取。

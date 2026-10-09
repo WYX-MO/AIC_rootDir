@@ -1,0 +1,354 @@
+  0  126 sampled frames, 439 detections
+  1  103 sampled frames, 164 detections
+  2  61 sampled frames, 205 detections
+  3  50 sampled frames, 164 detections
+  4  86 sampled frames, 165 detections
+  5  42 sampled frames, 48 detections
+  6  62 sampled frames, 142 detections
+  7  41 sampled frames, 76 detections
+  8  36 sampled frames, 47 detections
+  9  42 sampled frames, 119 detections
+  ... 10/174 videos (23s)
+  10  65 sampled frames, 133 detections
+  11  49 sampled frames, 134 detections
+  12  30 sampled frames, 32 detections
+  13  32 sampled frames, 46 detections
+  14  36 sampled frames, 50 detections
+  15  25 sampled frames, 68 detections
+  16  26 sampled frames, 101 detections
+  17  48 sampled frames, 85 detections
+  18  189 sampled frames, 318 detections
+  19  1033 sampled frames, 1291 detections
+  ... 20/174 videos (120s)
+  20  1715 sampled frames, 2355 detections
+  21  268 sampled frames, 206 detections
+  22  166 sampled frames, 338 detections
+  23  33 sampled frames, 34 detections
+  24  63 sampled frames, 131 detections
+  25  128 sampled frames, 192 detections
+  26  30 sampled frames, 90 detections
+  27  125 sampled frames, 128 detections
+  28  21 sampled frames, 100 detections
+  29  27 sampled frames, 28 detections
+  ... 30/174 videos (264s)
+  30  60 sampled frames, 124 detections
+  31  28 sampled frames, 182 detections
+  32  34 sampled frames, 33 detections
+  33  108 sampled frames, 173 detections
+  34  80 sampled frames, 117 detections
+  35  51 sampled frames, 51 detections
+  36  103 sampled frames, 156 detections
+  37  84 sampled frames, 557 detections
+  38  28 sampled frames, 118 detections
+  39  23 sampled frames, 46 detections
+  ... 40/174 videos (282s)
+  40  28 sampled frames, 149 detections
+  41  29 sampled frames, 39 detections
+  42  28 sampled frames, 81 detections
+  43  38 sampled frames, 64 detections
+  44  54 sampled frames, 65 detections
+  45  48 sampled frames, 73 detections
+  46  39 sampled frames, 27 detections
+  47  30 sampled frames, 128 detections
+  48  29 sampled frames, 46 detections
+  49  34 sampled frames, 72 detections
+  ... 50/174 videos (307s)
+  50  36 sampled frames, 33 detections
+  51  49 sampled frames, 26 detections
+  52  68 sampled frames, 71 detections
+  53  29 sampled frames, 449 detections
+  54  48 sampled frames, 50 detections
+  55  42 sampled frames, 44 detections
+  56  82 sampled frames, 132 detections
+  57  53 sampled frames, 56 detections
+  58  54 sampled frames, 519 detections
+  59  36 sampled frames, 213 detections
+  ... 60/174 videos (335s)
+  60  20 sampled frames, 58 detections
+  61  58 sampled frames, 62 detections
+  62  182 sampled frames, 206 detections
+  63  72 sampled frames, 119 detections
+  64  118 sampled frames, 219 detections
+  65  53 sampled frames, 56 detections
+  66  116 sampled frames, 123 detections
+  67  91 sampled frames, 94 detections
+  68  88 sampled frames, 88 detections
+  69  76 sampled frames, 116 detections
+  ... 70/174 videos (363s)
+  70  63 sampled frames, 242 detections
+  71  64 sampled frames, 114 detections
+  72  43 sampled frames, 39 detections
+  73  57 sampled frames, 69 detections
+  74  55 sampled frames, 122 detections
+  75  79 sampled frames, 185 detections
+  76  78 sampled frames, 95 detections
+  77  51 sampled frames, 52 detections
+  78  148 sampled frames, 133 detections
+  79  117 sampled frames, 323 detections
+  ... 80/174 videos (402s)
+  80  20 sampled frames, 21 detections
+  81  27 sampled frames, 31 detections
+  82  95 sampled frames, 166 detections
+  83  354 sampled frames, 339 detections
+  84  89 sampled frames, 225 detections
+  85  151 sampled frames, 329 detections
+  86  168 sampled frames, 337 detections
+  87  24 sampled frames, 42 detections
+  88  54 sampled frames, 67 detections
+  89  193 sampled frames, 271 detections
+  ... 90/174 videos (481s)
+  90  50 sampled frames, 59 detections
+  91  931 sampled frames, 1460 detections
+  92  33 sampled frames, 47 detections
+  93  69 sampled frames, 24 detections
+  94  73 sampled frames, 122 detections
+  95  82 sampled frames, 84 detections
+  96  110 sampled frames, 30 detections
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+[swscaler @ 0x57bc25c0] Unsupported input (Operation not supported): fmt:yuv420p csp:unknown prim:unknown trc:log316 -> fmt:bgr24 csp:gbr prim:unknown trc:unknown
+  97  160 sampled frames, 0 detections
+  98  49 sampled frames, 27 detections
+  99  72 sampled frames, 100 detections
+  ... 100/174 videos (593s)
+  100  319 sampled frames, 323 detections
+  101  108 sampled frames, 180 detections
+  102  47 sampled frames, 75 detections
+  103  58 sampled frames, 39 detections
+  104  81 sampled frames, 135 detections
+  105  115 sampled frames, 85 detections
+  106  95 sampled frames, 65 detections
+  107  426 sampled frames, 389 detections
+  108  49 sampled frames, 129 detections
+  109  69 sampled frames, 82 detections
+  ... 110/174 videos (651s)
+  110  104 sampled frames, 102 detections
+  111  112 sampled frames, 141 detections
+  112  75 sampled frames, 39 detections
+  113  154 sampled frames, 180 detections
+  114  73 sampled frames, 45 detections
+  115  56 sampled frames, 94 detections
+  116  155 sampled frames, 242 detections
+  117  51 sampled frames, 65 detections
+  118  58 sampled frames, 73 detections
+  119  55 sampled frames, 59 detections
+  ... 120/174 videos (683s)
+  120  120 sampled frames, 239 detections
+  121  89 sampled frames, 74 detections
+  122  96 sampled frames, 121 detections
+  123  49 sampled frames, 88 detections
+  124  85 sampled frames, 275 detections
+  125  109 sampled frames, 305 detections
+  126  95 sampled frames, 223 detections
+  127  146 sampled frames, 439 detections
+  128  66 sampled frames, 105 detections
+  129  81 sampled frames, 118 detections
+  ... 130/174 videos (727s)
+  130  53 sampled frames, 32 detections
+  131  64 sampled frames, 63 detections
+  132  87 sampled frames, 116 detections
+  133  51 sampled frames, 287 detections
+  134  70 sampled frames, 59 detections
+  135  47 sampled frames, 182 detections
+  136  85 sampled frames, 95 detections
+  137  67 sampled frames, 48 detections
+  138  47 sampled frames, 56 detections
+  139  79 sampled frames, 118 detections
+  ... 140/174 videos (757s)
+  140  134 sampled frames, 278 detections
+  141  119 sampled frames, 64 detections
+  142  90 sampled frames, 348 detections
+  143  49 sampled frames, 161 detections
+  144  55 sampled frames, 82 detections
+  145  72 sampled frames, 53 detections
+  146  47 sampled frames, 40 detections
+  147  59 sampled frames, 31 detections
+  148  263 sampled frames, 539 detections
+  149  101 sampled frames, 108 detections
+  ... 150/174 videos (808s)
+  150  50 sampled frames, 55 detections
+  151  57 sampled frames, 32 detections
+  152  81 sampled frames, 112 detections
+  153  60 sampled frames, 64 detections
+  154  118 sampled frames, 466 detections
+  155  48 sampled frames, 42 detections
+  156  70 sampled frames, 38 detections
+  157  239 sampled frames, 982 detections
+  158  116 sampled frames, 762 detections
+  159  75 sampled frames, 81 detections
+  ... 160/174 videos (845s)
+  160  86 sampled frames, 173 detections
+  161  70 sampled frames, 300 detections
+  162  135 sampled frames, 288 detections
+  163  99 sampled frames, 109 detections
+  164  104 sampled frames, 218 detections
+  165  90 sampled frames, 343 detections
+  166  90 sampled frames, 331 detections
+  167  108 sampled frames, 400 detections
+  168  52 sampled frames, 44 detections
+  169  48 sampled frames, 44 detections
+  ... 170/174 videos (878s)
+  170  88 sampled frames, 146 detections
+  171  51 sampled frames, 191 detections
+  172  59 sampled frames, 68 detections
+  173  78 sampled frames, 92 detections
+  ... 174/174 videos (887s)
+
+wrote yolo_test_cache.json  (174 videos, 2.6 MB)

@@ -1,0 +1,17 @@
+# --- 大件：视频 / 帧缓存 / 可视化输出（不入库；队友在本地各自准备）---
+video/
+val_video/
+val_cache/
+viz/
+probe_video/
+fu_testset
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+
+# --- 编辑器 / 系统 ---
+*.swp
+.DS_Store
+.idea/
+.vscode/
